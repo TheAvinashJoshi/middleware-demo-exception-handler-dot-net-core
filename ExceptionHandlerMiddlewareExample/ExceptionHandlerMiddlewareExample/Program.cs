@@ -11,7 +11,7 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Custome Middleware for Exception Handling
+// Custom Middleware for Exception Handling
 app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 // Configure the HTTP request pipeline.
