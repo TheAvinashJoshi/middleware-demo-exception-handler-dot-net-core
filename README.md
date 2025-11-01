@@ -1,2 +1,2 @@
-# middleware-demo-exception-handler-dot-net-core
+# Demonstrating Custom Middleware in .Net Core
 Demonstrating the Middleware in .Net Core in .Net Core
