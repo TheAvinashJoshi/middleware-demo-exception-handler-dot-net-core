@@ -1,5 +1,6 @@
 # Demonstrating Custom Middleware in .Net Core
-Demonstrating the Middleware in .Net Core in .Net Core
+Demonstrating the Middleware in .Net Core in .Net Core.
+This simulates an exception and how it behaves. The pipeline is configured to handle that and break with a user friendly response
 
 ### Technology
 .Net Core, C#
