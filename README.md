@@ -8,9 +8,13 @@ This simulates an exception and how it behaves. The pipeline is configured to ha
 ### Blog explaining this
 https://theavinashjoshi.com/middleware-in-net-core/
 
+### Youtube Video
+https://www.youtube.com/watch?v=zkDBvRpzFwI
+
 ### Before Middleware
-<img width="893" height="529" alt="image" src="https://github.com/user-attachments/assets/d028d8f7-3922-4978-a08b-828d48d68bf5" />
+<img width="1858" height="821" alt="image" src="https://github.com/user-attachments/assets/8e31e1eb-5f62-4130-bbee-9afba6dfe1d1" />
+
 
 ### After Middleware
-<img width="932" height="539" alt="image" src="https://github.com/user-attachments/assets/5413afcc-311c-465e-af62-39947846723d" />
+<img width="1717" height="903" alt="image" src="https://github.com/user-attachments/assets/cb84631b-75a5-4839-86fc-bbcd48ea14bb" />
 
