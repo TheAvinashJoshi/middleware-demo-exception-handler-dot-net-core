@@ -18,3 +18,5 @@ https://www.youtube.com/watch?v=zkDBvRpzFwI
 ### After Middleware
 <img width="1717" height="903" alt="image" src="https://github.com/user-attachments/assets/cb84631b-75a5-4839-86fc-bbcd48ea14bb" />
 
+### Notes
+Please make your database by your own. That will build practice to hands-on in this project. 
