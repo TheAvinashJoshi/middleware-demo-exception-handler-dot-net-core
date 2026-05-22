@@ -1,25 +1,31 @@
+using ExceptionHandlerMiddlewareExample.Database;
+using ExceptionHandlerMiddlewareExample.Repositories;
 using ExceptionHandlerMiddlewareExamples;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+var connStr = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(connStr).UseSnakeCaseNamingConvention());
 
+builder.Services.AddTransient<IBlogCategoryRepository, BlogCategoryRepository>();
+builder.Services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Custom Middleware for Exception Handling
+if (!app.Environment.IsProduction() && !app.Environment.IsStaging())
+{
+    app.UseDeveloperExceptionPage();
+}
+
 app.UseMiddleware<ExceptionHandlingMiddleware>();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwagger();
+
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 

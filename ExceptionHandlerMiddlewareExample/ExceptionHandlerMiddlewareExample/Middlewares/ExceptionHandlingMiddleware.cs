@@ -25,8 +25,7 @@ namespace ExceptionHandlerMiddlewareExamples
                 var errorResponse = new
                 {
                     IsSuccess = false,
-                    Message = GENERIC_ERROR_MESSAGE,
-                    ErrorDetails = ex
+                    Message = GENERIC_ERROR_MESSAGE
                 };
 
                 var json = Newtonsoft.Json.JsonConvert.SerializeObject(errorResponse);
